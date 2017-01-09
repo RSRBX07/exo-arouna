@@ -4,4 +4,5 @@ nom = gets
 puts "Bienvenue "+ nom
 puts "quel est ton age ?"
 age = gets
-print "Bienvenue #{nom} tu as #{age} ans"
+print "Bienvenue #{nom} tu as #{age}"
+puts "Salut #{nom} Salut #{nom} Salut #{nom}"
