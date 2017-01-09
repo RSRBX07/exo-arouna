@@ -7,3 +7,11 @@ s = 60
 
 resultat = nbj * nb * m * s
 puts resultat
+
+#nombre de seconde dans mon age
+
+age = 27
+
+ageSeconde = age * resultat
+
+puts ageSeconde
