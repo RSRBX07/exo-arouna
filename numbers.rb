@@ -15,3 +15,9 @@ age = 27
 ageSeconde = age * resultat
 
 puts ageSeconde
+
+temps = Time.now
+puts temps
+
+anneeDeNaissance = Time.new(1989, 06, 20, 17, 00)
+puts anneeDeNaissance
