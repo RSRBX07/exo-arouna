@@ -5,4 +5,4 @@ puts "Bienvenue "+ nom
 puts "quel est ton age ?"
 age = gets
 print "Bienvenue #{nom} tu as #{age}"
-puts "Salut #{nom} Salut #{nom} Salut #{nom}"
+puts "Salut #{nom}" * 3
