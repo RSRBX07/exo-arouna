@@ -1,3 +1,4 @@
+=begin
 #Affiche le tirage de 5 nombre entre 1 et 45
 
 #nombres = [rand(1..45), rand(1..45), rand(1..45), rand(1..45), rand(1..45)]
@@ -25,3 +26,10 @@ if vendredi_13 == "o"
  cagnote = cagnoteTreize
 end
 puts "le tirage du jour est : #{cagnote}"
+
+#recuperer les chiffres a l'user et verifier si il a gagner
+=end
+
+puts "Bonjour, entrez vos numero svp :"
+numeroUsers[] = gets
+puts numeroUsers
