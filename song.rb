@@ -1,10 +1,10 @@
 n=30
 
 puts "Allongeons la jambe"
-puts "
-Ma poule n'a plus qu'#{n-1} poussins
-Ma poule n'a plus qu'#{n-1} poussins
-Elle en avait trente
+song = "
+Ma poule n'a plus qu'#{i} poussins
+Ma poule n'a plus qu'#{i} poussins
+Elle en avait trenten
 Allongeons la jambe
 
 Allongeons la jambe, la jambe
