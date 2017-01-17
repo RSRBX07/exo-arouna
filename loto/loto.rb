@@ -1,11 +1,12 @@
 require 'date'
 class Loto
+  attr_reader :picked_balls
 
   def self.get_grid
     grid = []
     5.times do
       input = gets.to_i
-      grid << input
+      grid.push input
     end
     grid
   end
@@ -26,11 +27,17 @@ class Loto
 
   # enregistre une grille
   # pour le loto courant
-  def validate_grid grid
+  
     # verifier que le tirage n'a pas encore eu lieu
 
-    @saved_grids ||= []
-    @saved_grids.push grid
+  def validate_grid grid
+    if @picked_balls.nil?
+      @saved_grids ||= []
+      @saved_grids.push grid
+    else
+      puts "Trop tard" 
+      
+    end
   end 
   # demander une grille de jeu
 

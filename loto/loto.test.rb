@@ -2,7 +2,7 @@
 
 require './loto.rb'
 
-loto_du_samedi = Loto.new
+my_loto = Loto.new
 # 2.times {loto_du_samedi.validate_grid Loto.get_flash}
 
 # #.each { |grid| loto_du_samedi.check_grid grid }
@@ -16,4 +16,9 @@ loto_du_samedi = Loto.new
 #   puts "nobody win"
 # end
 
-loto_du_samedi.prize
+gridloto = Loto.get_grid
+my_loto.validate_grid gridloto
+
+puts my_loto.has_winner?
+my_loto.vendredi_13?
+puts my_loto.check_grid gridloto
