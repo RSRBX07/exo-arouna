@@ -1,61 +1,85 @@
+require 'date'
 class Loto
-  attr_reader :draw, :players
+  attr_reader :picked_balls
 
   def initialize
-    @players = []
-    @draw =[]
+    @picked_balls = []
   end
 
-  def self.create_a_grid
-    result_game = []
-    while result_game.size <= 4
-      print "chiffre #{result_game.size + 1} : "
-      input_number = gets.to_i
-      check_numbers(input_number,result_game)
+  def self.get_grid
+    grid = []
+    5.times do
+      input = gets.to_i
+      grid.push input
     end
-    result_game
+    grid
   end
 
-  def self.check_numbers(input_number,result_game)
-    if input_number < 1 || input_number > 45 || result_game.include?(input_number)
+  def self.get_flash
+    (1..45).to_a.shuffle.take 5
+  end
+
+  def has_winner?
+    #comprer tous les bulletins valides avec la grille gagnante
+    sorted_draw = draw.sort
+    @saved_grids.each do |grid|
+      sorted_grid = grid.sort
+      return true if sorted_grid == sorted_draw
+    end
+    return false
+  end
+
+  # enregistre une grille
+  # pour le loto courant
+  
+    # verifier que le tirage n'a pas encore eu lieu
+
+  def validate_grid grid
+    if @picked_balls.nil?
+      @saved_grids ||= []
+      @saved_grids.push grid
     else
-      result_game.push(input_number)
+      puts "Trop tard" 
+      
+    end
+  end 
+  # demander une grille de jeu
+
+  # affichage du montant de la cagnote
+  # entre 100 et 500.000 Euros
+  # le vendredi 13, la cagnote est de 2 millions
+  def vendredi_13?
+    Date.today.day == 13 && Date.today.friday?
+  end
+
+  def check_grid grid
+    # afficher si gagne ou perdu
+    if grid.sort == draw.sort
+      puts "You win #{prize}!"
+    else
+      puts "You loose !"
+    end
+  end
+
+  def draw
+    available_balls = (1..45).to_a
+    # shuffle balls and take 5
+    # @picked_balls ||= available_balls.shuffle.take(5)
+    @picked_balls = @picked_balls || available_balls.shuffle.take(5)
+
+    puts "Le tirage du jour est : #{@picked_balls.sort}" 
+    @picked_balls
+  end
+
+
+  private
+
+  def prize
+    if vendredi_13?
+      2_000_000
+    else
+      100_000
     end
   end
   
-  def grid_validation grid
-    if check_draw
-      @players << grid.sort
-    else
-     return false
-    end
-  end
-
-  def check_result
-    @draw = (1..5).to_a.sample(5).sort
-    last_result = true
-    @players.to_a.each do |grid|
-      if grid == @draw
-        last_result = false
-      end
-      return winner? last_result
-    end 
-  end
-
-#=====================================
-  private
-  #=====================================
-
-  def check_draw
-    @draw.empty?
-  end
-
-  def winner? last_result
-    if last_result == false
-      return true
-    else
-      return false
-    end
-  end
-
 end
