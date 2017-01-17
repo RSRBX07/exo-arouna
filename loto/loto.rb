@@ -1,11 +1,14 @@
 require 'date'
 class Loto
   attr_reader :picked_balls
-
+  attr_reader :saved_grids
+  attr_writer :saved_grids
+  
   def initialize
-    @picked_balls = []
+    @picked_balls= []
+    @saved_grids= []
   end
-
+  
   def self.get_grid
     grid = []
     5.times do

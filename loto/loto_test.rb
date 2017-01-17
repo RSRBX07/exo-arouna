@@ -16,9 +16,9 @@ my_loto = Loto.new
 #   puts "nobody win"
 # end
 
-usergridloto = Loto.get_grid
+gridloto = Loto.get_grid
 #my_loto.validate_grid usergridloto
-puts usergridloto
+puts gridloto
 puts my_loto.has_winner?
 my_loto.vendredi_13?
-puts my_loto.check_grid usergridloto
+puts my_loto.check_grid gridloto
