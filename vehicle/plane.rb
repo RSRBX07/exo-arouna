@@ -1,14 +1,27 @@
-class Plane
+require_relative './vehicle.rb'
+
+class Plane < Vehicle
     attr_reader :etat
     
     def initialize
-        @etat = "on the ground"
+        super
+        @flying ||= false
+        @out_of_order = true
+
     end
 
-    def etat_plane
-        puts = "Votre etat ? "
-        input @etat
+
+
+    def take_off
+        @flying = true
     end
 
+    def land
+        @flying = false
+    end
     
 end
+
+test = Plane.new
+
+puts test.inspect
