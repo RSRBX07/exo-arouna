@@ -4,7 +4,7 @@ class Game < ApplicationRecord
     @players += 1
   end
   
-  def supp_player
+  def remove_player
     @players -= 1
   end
   private
