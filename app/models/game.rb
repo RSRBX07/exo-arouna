@@ -5,8 +5,10 @@ class Game < ApplicationRecord
   end
   
   def remove_player
-    @players -= 1
+    raise RunTimeError.new "Il n'y a plus de joueur" if @players <=0
+    @players -= 1   
   end
+
   private
 
   def initialize
