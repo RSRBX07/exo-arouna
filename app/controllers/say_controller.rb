@@ -1,6 +1,6 @@
 class SayController < ApplicationController
   def hello
-    @time = DateTime.now.strftime"%R"
+    @time = DateTime.know.strftime"%R"
   end
 
   def goodbye
