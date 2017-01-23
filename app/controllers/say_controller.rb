@@ -1,5 +1,6 @@
 class SayController < ApplicationController
-  def hello,
+  def hello
+    @time = DateTime.now.strftime"%R"
   end
 
   def goodbye
