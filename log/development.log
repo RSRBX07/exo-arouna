@@ -2267,3 +2267,91 @@ Processing by GamesController#show as HTML
 Completed 200 OK in 98ms (Views: 74.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/games/24" for 127.0.0.1 at 2017-01-24 13:41:51 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 5390ms (Views: 5362.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/games/24" for 127.0.0.1 at 2017-01-24 13:51:20 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2325ms (Views: 2314.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/24" for 127.0.0.1 at 2017-01-24 13:55:00 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 130ms (Views: 119.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/games/24" for 127.0.0.1 at 2017-01-24 13:55:16 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 621ms (Views: 611.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/games/24" for 127.0.0.1 at 2017-01-24 13:55:36 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 154ms (Views: 145.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 13:56:35 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 140ms (Views: 143.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 13:56:36 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 149ms (Views: 140.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/games/24" for 127.0.0.1 at 2017-01-24 13:56:37 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 128ms (Views: 132.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 14:13:28 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 168ms (Views: 159.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/24" for 127.0.0.1 at 2017-01-24 14:13:37 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 138ms (Views: 136.4ms | ActiveRecord: 1.0ms)
+
+
