@@ -1597,3 +1597,673 @@ Completed 200 OK in 89ms (Views: 67.1ms | ActiveRecord: 0.0ms)
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-01-23 16:10:20 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb (5.0ms)
+Completed 200 OK in 41ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-23 16:10:30 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 1185ms (Views: 1174.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/games/1" for 127.0.0.1 at 2017-01-23 16:10:41 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 78ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/1" for 127.0.0.1 at 2017-01-23 16:20:35 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 78ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-23 16:20:53 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 83ms (Views: 74.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/games/1" for 127.0.0.1 at 2017-01-23 16:20:57 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 82ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/1" for 127.0.0.1 at 2017-01-23 16:22:34 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 83ms (Views: 68.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/games/1" for 127.0.0.1 at 2017-01-23 16:22:56 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 86ms (Views: 71.0ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPlayersToGames (20170123154257)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mALTER TABLE "games" ADD "players" integer[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170123154257"]]
+  [1m[35m (84.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/games/1" for 127.0.0.1 at 2017-01-23 16:51:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 78ms (Views: 62.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/1" for 127.0.0.1 at 2017-01-23 16:51:05 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 72ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/1" for 127.0.0.1 at 2017-01-23 16:51:06 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 72ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 1]]
+  [1m[35m (111.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 2]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 3]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Loto du Lundi"], ["description", "le tirage est 12, 42, 52, 68 et 13"], ["created_at", 2017-01-24 10:37:58 UTC], ["updated_at", 2017-01-24 10:37:58 UTC]]
+  [1m[35m (93.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Loto du Mardi"], ["description", "le tirage est 1, 42, 52, 68 et 13"], ["created_at", 2017-01-24 10:37:58 UTC], ["updated_at", 2017-01-24 10:37:58 UTC]]
+  [1m[35m (89.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Loto du Mercredi"], ["description", "le tirage est 2, 42, 52, 68 et 13"], ["created_at", 2017-01-24 10:37:58 UTC], ["updated_at", 2017-01-24 10:37:58 UTC]]
+  [1m[35m (65.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Loto du Jeudi"], ["description", "le tirage est 32, 42, 52, 68 et 13"], ["created_at", 2017-01-24 10:37:58 UTC], ["updated_at", 2017-01-24 10:37:58 UTC]]
+  [1m[35m (64.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Loto du Vendredi"], ["description", "le tirage est 22, 42, 52, 68 et 13"], ["created_at", 2017-01-24 10:37:58 UTC], ["updated_at", 2017-01-24 10:37:58 UTC]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:38:52 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (102.0ms)
+Completed 200 OK in 1663ms (Views: 1498.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 4]]
+  [1m[35m (93.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 5]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 6]]
+  [1m[35m (72.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 7]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 8]]
+  [1m[35m (80.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Lundi"], ["description", "le tirage est 12, 42, 52, 68 et 13"], ["created_at", 2017-01-24 10:42:02 UTC], ["updated_at", 2017-01-24 10:42:02 UTC], ["players", 123456]]
+  [1m[35m (49.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Mardi"], ["description", "le tirage est 1, 42, 52, 68 et 13"], ["created_at", 2017-01-24 10:42:02 UTC], ["updated_at", 2017-01-24 10:42:02 UTC], ["players", 654321]]
+  [1m[35m (62.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Mercredi"], ["description", "le tirage est 2, 42, 52, 68 et 13"], ["created_at", 2017-01-24 10:42:02 UTC], ["updated_at", 2017-01-24 10:42:02 UTC], ["players", 789456]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Jeudi"], ["description", "le tirage est 32, 42, 52, 68 et 13"], ["created_at", 2017-01-24 10:42:02 UTC], ["updated_at", 2017-01-24 10:42:02 UTC], ["players", 896547]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Vendredi"], ["description", "le tirage est 22, 42, 52, 68 et 13"], ["created_at", 2017-01-24 10:42:02 UTC], ["updated_at", 2017-01-24 10:42:02 UTC], ["players", 453189]]
+  [1m[35m (64.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:42:06 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 73ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:42:08 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 71ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:42:08 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 77ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:42:10 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 74ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:42:14 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 73ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:42:16 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 72ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:43:18 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (31.0ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `player' for #<Game:0x9cc9ac8>
+Did you mean?  players
+               players?
+               players=):
+    17:       <tr>
+    18:         <td><%= game.name %></td>
+    19:         <td><%= game.description %></td>
+    20:         <td><%= game.player %></td>
+    21:         <td><%= link_to 'Show', game %></td>
+    22:         <td><%= link_to 'Edit', edit_game_path(game) %></td>
+    23:         <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  
+app/views/games/index.html.erb:20:in `block in _app_views_games_index_html_erb___67471100_82136784'
+app/views/games/index.html.erb:16:in `_app_views_games_index_html_erb___67471100_82136784'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (542.0ms)
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:44:11 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 77ms (Views: 67.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:44:15 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 78ms (Views: 69.3ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 9]]
+  [1m[35m (80.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (15.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 10]]
+  [1m[35m (93.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 11]]
+  [1m[35m (93.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 12]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 13]]
+  [1m[35m (80.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Lundi"], ["description", "le tirage est 12, 42, 52, 68 et 13"], ["created_at", 2017-01-24 10:44:25 UTC], ["updated_at", 2017-01-24 10:44:25 UTC], ["players", 123456]]
+  [1m[35m (113.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Mardi"], ["description", "le tirage est 1, 42, 52, 68 et 13"], ["created_at", 2017-01-24 10:44:25 UTC], ["updated_at", 2017-01-24 10:44:25 UTC], ["players", 654321]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Mercredi"], ["description", "le tirage est 2, 42, 52, 68 et 13"], ["created_at", 2017-01-24 10:44:25 UTC], ["updated_at", 2017-01-24 10:44:25 UTC], ["players", 789456]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Jeudi"], ["description", "le tirage est 32, 42, 52, 68 et 13"], ["created_at", 2017-01-24 10:44:25 UTC], ["updated_at", 2017-01-24 10:44:25 UTC], ["players", 896547]]
+  [1m[35m (93.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Vendredi"], ["description", "le tirage est 22, 42, 52, 68 et 13"], ["created_at", 2017-01-24 10:44:26 UTC], ["updated_at", 2017-01-24 10:44:26 UTC], ["players", 453189]]
+  [1m[35m (86.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:45:37 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 71ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:46:39 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 92ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:47:12 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 297ms (Views: 275.8ms | ActiveRecord: 2.0ms)
+
+
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:48:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 320ms (Views: 299.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:48:51 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 77ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:49:14 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 98ms (Views: 75.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:49:24 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 74ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:54:45 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 72ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:57:06 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 76ms (Views: 66.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/games/14" for 127.0.0.1 at 2017-01-24 11:57:08 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 106ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 11:57:26 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 73ms (Views: 63.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/14" for 127.0.0.1 at 2017-01-24 11:58:27 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 80ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/14" for 127.0.0.1 at 2017-01-24 11:59:21 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 72ms (Views: 63.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/games/14" for 127.0.0.1 at 2017-01-24 11:59:41 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 76ms (Views: 67.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/14" for 127.0.0.1 at 2017-01-24 12:00:19 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 72ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/14" for 127.0.0.1 at 2017-01-24 12:00:31 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 74ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/14" for 127.0.0.1 at 2017-01-24 12:00:55 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 76ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/14" for 127.0.0.1 at 2017-01-24 12:01:19 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 85ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/14" for 127.0.0.1 at 2017-01-24 12:01:38 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 71ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 12:01:43 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 83ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/15" for 127.0.0.1 at 2017-01-24 12:01:46 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 53ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 12:01:47 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 75ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/16" for 127.0.0.1 at 2017-01-24 12:01:49 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 59ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 12:01:51 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 88ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/17" for 127.0.0.1 at 2017-01-24 12:01:52 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 70ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 12:01:54 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 88ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/18" for 127.0.0.1 at 2017-01-24 12:01:56 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 71ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 12:01:58 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 80ms (Views: 62.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/14" for 127.0.0.1 at 2017-01-24 12:08:50 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 72ms (Views: 69.4ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 14]]
+  [1m[35m (80.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 15]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 16]]
+  [1m[35m (62.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 17]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 18]]
+  [1m[35m (64.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Lundi"], ["description", "Le tirage est 12, 42, 52, 68 et 13"], ["created_at", 2017-01-24 11:10:16 UTC], ["updated_at", 2017-01-24 11:10:16 UTC], ["players", 123456]]
+  [1m[35m (93.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Mardi"], ["description", "Le tirage est 1, 42, 52, 68 et 13"], ["created_at", 2017-01-24 11:10:16 UTC], ["updated_at", 2017-01-24 11:10:16 UTC], ["players", 654321]]
+  [1m[35m (84.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Mercredi"], ["description", "Le tirage est 2, 42, 52, 68 et 13"], ["created_at", 2017-01-24 11:10:16 UTC], ["updated_at", 2017-01-24 11:10:16 UTC], ["players", 789456]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Jeudi"], ["description", "Le tirage est 32, 42, 52, 68 et 13"], ["created_at", 2017-01-24 11:10:16 UTC], ["updated_at", 2017-01-24 11:10:16 UTC], ["players", 896547]]
+  [1m[35m (62.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Vendredi"], ["description", "Le tirage est 22, 42, 52, 68 et 13"], ["created_at", 2017-01-24 11:10:16 UTC], ["updated_at", 2017-01-24 11:10:16 UTC], ["players", 453189]]
+  [1m[35m (62.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/games/14" for 127.0.0.1 at 2017-01-24 12:10:20 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Game with 'id'=14):
+  
+app/controllers/games_controller.rb:67:in `set_game'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (408.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 19]]
+  [1m[35m (93.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 20]]
+  [1m[35m (93.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 21]]
+  [1m[35m (62.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 22]]
+  [1m[35m (316.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 23]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Lundi"], ["description", "Le tirage est 12, 42, 52, 68 et 13"], ["created_at", 2017-01-24 11:11:03 UTC], ["updated_at", 2017-01-24 11:11:03 UTC], ["players", 123456]]
+  [1m[35m (62.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Mardi"], ["description", "Le tirage est 1, 42, 52, 68 et 13"], ["created_at", 2017-01-24 11:11:03 UTC], ["updated_at", 2017-01-24 11:11:03 UTC], ["players", 654321]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Mercredi"], ["description", "Le tirage est 2, 42, 52, 68 et 13"], ["created_at", 2017-01-24 11:11:03 UTC], ["updated_at", 2017-01-24 11:11:03 UTC], ["players", 789456]]
+  [1m[35m (62.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Jeudi"], ["description", "Le tirage est 32, 42, 52, 68 et 13"], ["created_at", 2017-01-24 11:11:03 UTC], ["updated_at", 2017-01-24 11:11:03 UTC], ["players", 896547]]
+  [1m[35m (62.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "description", "created_at", "updated_at", "players") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Loto du Vendredi"], ["description", "Le tirage est 22, 42, 52, 68 et 13"], ["created_at", 2017-01-24 11:11:03 UTC], ["updated_at", 2017-01-24 11:11:03 UTC], ["players", 453189]]
+  [1m[35m (71.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/games" for 127.0.0.1 at 2017-01-24 12:11:24 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 297ms (Views: 276.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/games/24" for 127.0.0.1 at 2017-01-24 12:11:33 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 92ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2017-01-24 12:11:41 +0100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 76ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/24" for 127.0.0.1 at 2017-01-24 12:14:39 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mGame Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 98ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
