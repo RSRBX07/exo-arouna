@@ -1,16 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<h1>
+  <%= @game.name %><br />
+</h1>
 <p>
-  <strong>Name:</strong>
-  <%= @game.name %>
-</p>
-<p>
-  Il y a <%= @game.players %> joueurs dans cette partie.
-</p>
-<p>
-  <strong>Description:</strong>
   <%= @game.description %>
 </p>
 
-<%= link_to 'Edit', edit_game_path(@game) %> |
+
 <%= link_to 'Back', games_path %>
