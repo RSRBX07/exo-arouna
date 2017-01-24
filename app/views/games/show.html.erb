@@ -1,11 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="alert alert-success">
-  <%= @game.name %><br />
-</h1>
-<p>
-  <%= @game.description %>
-</p>
+<div class="panel-group">
+  <div class="panel panel-primary">
+    <div class="panel-heading"> <%= @game.name %><br /></div>
+    <div class="panel-body"><%= @game.description %></div>
+  </div>
+</div>
 
 
-<%= link_to 'Back', games_path %>
+
+<button type="button" class="btn btn-default"><%= link_to 'Back', games_path %></button>
