@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Les tirages du loto de la semaine</h1>
+
+<% @games.each do |game| %>
+  <div><%= game.name %></div>
+  <div><%= link_to 'Show', game %></div>
+  <br>
+<% end %>
+
+<%= link_to 'New Game', new_game_path %>
